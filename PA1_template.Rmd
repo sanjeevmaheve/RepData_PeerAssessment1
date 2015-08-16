@@ -102,6 +102,8 @@ hist(stats1$sumTotalSteps,
      xlab = 'Number of steps per day', border=F, add=T,
      main = "Mean total number of steps taken per day")
 grid();box()
+legend("topright", c("Imputed", "Original"), 
+       col=c("skyblue", "red"), lwd=10)
 # Calculate and report the mean and median of the total number of 
 # steps taken per day.
 mean(stats3$sumTotalSteps)
