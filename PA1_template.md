@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 ```r
@@ -11,22 +16,6 @@ opts_chunk$set(echo = TRUE, results = "asis")
 
 ```r
 library(dplyr)
-```
-
-```
-## 
-## Attaching package: 'dplyr'
-## 
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-## 
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
-
-```r
 # unzip input file if not done already.
 if(!file.exists("./activity.csv")) {
     unzip ("activity.zip", exdir = "./")
@@ -56,7 +45,7 @@ hist(stats1$sumTotalSteps,
 grid()
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-2-1.png) 
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
 
 ```r
 # Calculate and report the mean and median of the total number of 
@@ -90,7 +79,7 @@ plot(stats2$interval,
 grid()
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
 
 ```r
 # Which 5-minute interval, on average across all the days in the dataset, 
@@ -144,7 +133,7 @@ hist(stats1$sumTotalSteps,
 grid();box()
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
 ```r
 # Calculate and report the mean and median of the total number of 
@@ -191,4 +180,4 @@ xyplot(steps ~ interval | dayType,
        type=c('l','g'))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
